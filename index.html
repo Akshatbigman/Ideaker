@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Idea Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div id="landing">
+        <h1>Welcome to the Kingdom of Ideas</h1>
+        <button id="enterButton">Enter the Kingdom of Ideas</button>
+    </div>
+    <div id="generator" class="hidden">
+        <div class="header">
+            <div class="user-stats">
+                <span id="userLevel">Level: 1</span>
+                <span id="userXP">XP: 0/100</span>
+            </div>
+            <div class="icons">
+                <span id="historyIcon">📜</span>
+                <span id="statsIcon">📊</span>
+            </div>
+        </div>
+        <h1>Ideaker</h1>
+        <div class="options">
+            <h2>Select a Programming Language:</h2>
+            <div class="buttons" id="languageButtons"></div>
+            <div>
+                <button id="otherLanguageButton">Other</button>
+            </div>
+        </div>
+        <div class="options">
+            <h2>Select a Project Type:</h2>
+            <div class="buttons" id="typeButtons"></div>
+            <div>
+                <button id="otherTypeButton">Other</button>
+            </div>
+        </div>
+        <button id="generateButton">Generate Idea</button>
+    </div>
+
+    <div id="otherLanguagePopup" class="popup">
+        <div class="popup-content">
+            <h2>What Programming Language?</h2>
+            <input type="text" id="customLanguageInput" placeholder="Enter custom language">
+            <div class="popup-buttons">
+                <button id="confirmOtherLanguage">Confirm</button>
+                <button class="close-popup">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="otherTypePopup" class="popup">
+        <div class="popup-content">
+            <h2>What Project Type?</h2>
+            <input type="text" id="customTypeInput" placeholder="Enter custom project type">
+            <div class="popup-buttons">
+                <button id="confirmOtherType">Confirm</button>
+                <button class="close-popup">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ideaPopup" class="popup">
+        <div class="popup-content">
+            <h2>Your Project Idea</h2>
+            <p id="ideaPopupContent"></p>
+            <button class="close-popup">Close</button>
+        </div>
+    </div>
+
+    <div id="statsPopup" class="popup">
+        <div class="popup-content">
+            <button class="close-popup">×</button>
+            <h2>Your Progress</h2>
+            <div class="stats-container">
+                <div id="currentLevel"></div>
+                <div id="totalXP"></div>
+                <div id="achievementCount"></div>
+            </div>
+            <h3>Recent Achievements</h3>
+            <div id="unlockedAchievements"></div>
+            <h3>All Achievements</h3>
+            <div id="achievementList"></div>
+        </div>
+    </div>
+
+    <div id="historyPopup" class="popup">
+        <div class="popup-content">
+            <h2>Idea History</h2>
+            <div id="historyList"></div>
+            <button class="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
